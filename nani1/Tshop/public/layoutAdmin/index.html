@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chi Tiết Sản Phẩm</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+  .admin-header {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    border-bottom: 1px solid #e3e6f0;
+  }
+  .admin-sidebar {
+    background-color: #343a40;
+    min-height: 100vh;
+  }
+  .sidebar-link {
+    color: #fff;
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+  }
+  .sidebar-link:hover, .sidebar-link.active {
+    background-color: #007bff;
+    text-decoration: none;
+  }
+  .product-image {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+</head>
+<body>
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar -->
+    <nav class="col-md-2 d-none d-md-block admin-sidebar">
+      <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="sidebar-link active" href="#">
+              Dashboard
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="sidebar-link" href="#">
+              Đơn hàng
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="sidebar-link" href="#">
+              Sản phẩm
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="sidebar-link" href="#">
+              Khách hàng
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main content -->
+    <main role="main" class="col-md-10 ml-sm-auto col-lg-10 px-md-4">
+      <div class="admin-header">
+        <h2>Chi Tiết Sản Phẩm</h2>
+      </div>
+      <div class="product-details">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="path-to-product-image.jpg" alt="Tên Sản Phẩm" class="product-image">
+          </div>
+          <div class="col-md-6">
+            <h3>Áo sơ mi công sở</h3>
+            <p>Mã sản phẩm: SP00055</p>
+            <p>Giá: 90,000₫</p>
+            <p>Số lượng: 79</p>
+            <p>Danh mục: Áo công sở</p>
+            <p>Nhà sản xuất: 🇻🇳🇰🇷🇨🇳🇯🇵</p>
+            <button class="btn btn-primary">Chỉnh sửa</button>
+            <button class="btn btn-danger">Xóa</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

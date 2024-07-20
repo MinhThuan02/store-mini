@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trang Cá Nhân</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+  .sidebar {
+    background-color: #f8f9fa;
+    padding: 20px;
+  }
+  .sidebar h4 {
+    margin-bottom: 20px;
+  }
+  .sidebar .list-group-item-action {
+    margin-bottom: 10px;
+  }
+  .content {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  .content h5 {
+    color: #007bff;
+  }
+  .btn-logout {
+    background-color: #ff4500;
+    color: white;
+  }
+  .btn-logout:hover {
+    background-color: #c63e00;
+  }
+  .info-section {
+    margin-bottom: 20px;
+  }
+  .info-section h6 {
+    color: #28a745;
+  }
+  .info-section .btn-edit, .info-section .btn-delete {
+    font-size: 0.8rem;
+    margin-left: 10px;
+  }
+  .btn-edit {
+    color: #ffc107;
+  }
+  .btn-delete {
+    color: #dc3545;
+  }
+  .btn-add-address {
+    background-color: #28a745;
+    color: white;
+  }
+  .btn-add-address:hover {
+    background-color: #1e7e34;
+  }
+</style>
+</head>
+<body>
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-md-3 sidebar">
+      <h4>Anh Thuận</h4>
+      <a href="#" class="list-group-item list-group-item-action">Đơn hàng đã mua</a>
+      <a href="#" class="list-group-item list-group-item-action">Thông tin và sổ địa chỉ</a>
+      <button class="btn btn-logout list-group-item list-group-item-action">Đăng Xuất</button>
+      <div>Tổng điểm tích lũy: 122.100 điểm</div>
+      <!-- QR codes for app download could be added here -->
+    </div>
+    <div class="col-md-9">
+      <div class="content">
+        <h5>Thông tin tài khoản</h5>
+        <div class="info-section">
+          <h6>THÔNG TIN CÁ NHÂN</h6>
+          <div>Anh Thuận - 0933225202 <button class="btn btn-edit">Sửa</button></div>
+        </div>
+        <div class="info-section">
+          <h6>ĐỊA CHỈ NHẬN HÀNG</h6>
+          <div>121 Bến Vân Đồn, Phường 9, Quận 4, Hồ Chí Minh <button class="btn btn-edit">Sửa</button><button class="btn btn-delete">Xóa</button></div>
+          <div>ấp Hưng, Diêm Hy, CT TTG, Huyện Châu Thành, Tiền Giang <button class="btn btn-edit">Sửa</button><button class="btn btn-delete">Xóa</button></div>
+          <button class="btn btn-add-address">Thêm địa chỉ nhận hàng</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

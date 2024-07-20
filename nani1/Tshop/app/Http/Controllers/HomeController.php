@@ -24,9 +24,11 @@ class HomeController extends Controller
         $products = Product::orderBy('created_at', 'desc')->take(6)->get();
         $products_jp = Product::where('brand_id', 1)->take(6)->get();
         $products_cate = Product::where('category_id', 4)->take(6)->get();
+        $products_health = Product::where('category_id', 3)->take(6)->get();
+        // $products_ore = Product::where('category_id', 3)->take(6)->get();
 
         // $categories_hot = DB::table('categories')->orderBy('view', 'desc')->limit('5')->get();
-        return view('home', compact('products','products_jp','products_cate','products_HM'));
+        return view('home', compact('products','products_jp','products_cate','products_HM','products_health'));
 
 
 

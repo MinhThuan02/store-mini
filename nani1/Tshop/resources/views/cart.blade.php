@@ -98,7 +98,7 @@
                             <li>Subtotal <span>{{ number_format(Cart::getSubTotal(), 0, '.', '.') }} VND</span></li>
                             <li>Total <span>{{ number_format(Cart::getTotal(), 0, '.', '.') }} VND</span></li>
                         </ul>
-                        <a href="#" class="primary-btn">PROCEED TO CHECKOUT</a>
+                        <a href="{{URL::to ('/checklogin')}}" class="primary-btn">PROCEED TO CHECKOUT</a>
                     </div>
                 </div>
             </div>

@@ -78,9 +78,17 @@
             </div>
             <div class="col-lg-2">
                 <div class="header__cart">
+
+                    @if(!Auth::check())
                     <ul>
-                        <li><a href="{{ url('cart') }}"><i class="fa fa-shopping-bag"></i> <span id="cart-quantity">{{ Cart::getTotalQuantity() }}</span></a></li>
+                        <li><a href="{{ route('checklogin') }}"><i class="fa fa-shopping-bag"></i> <span id="cart-quantity">{{ Cart::getTotalQuantity() }}</span></a></li>
                     </ul>
+                @else
+                    <ul>
+                        <li><a href="{{ route('checkout') }}"><i class="fa fa-shopping-bag"></i> <span id="cart-quantity">{{ Cart::getTotalQuantity() }}</span></a></li>
+                    </ul>
+                @endif
+
                     <div class="header__cart__price">Tổng: <span id="cart-total">{{ number_format(Cart::getTotal(), 0, ',', '.') }} VND</span></div>
                 </div>
             </div>

@@ -18,59 +18,55 @@
             </div>
             <div class="checkout__form">
                 <h4>Thanh Toán</h4>
-                <form action="#">
+                <form action="{{URL::to ('/save-checkout')}}" method="POST">
+                    {{csrf_field()}}
                     <div class="row">
                         <div class="col-lg-8 col-md-6">
                             <div class="row">
-                                <div class="col-lg-6">
+
+                                <div class="col-lg-12">
                                     <div class="checkout__input">
-                                        <p>Họ <span>*</span></p>
-                                        <input type="text">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="checkout__input">
-                                        <p>Tên<span>*</span></p>
-                                        <input type="text">
+                                        <p>Họ và Tên<span>*</span></p>
+                                        <input type="text" name="shipping_name">
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="checkout__input">
                                 <p>Địa chỉ<span>*</span></p>
-                                <input type="text" placeholder="Street Address" class="checkout__input__add">
-                               
+                                <input type="text" name="shipping_address" placeholder="Street Address" class="checkout__input__add">
+
                             </div>
-                            
-                           
-                           
+
+
+
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
                                         <p>Số điện thoại<span>*</span></p>
-                                        <input type="text">
+                                        <input type="phone" name="shipping_phone">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
                                         <p>Email<span>*</span></p>
-                                        <input type="email">
+                                        <input type="email" name="shipping_email">
                                     </div>
                                 </div>
                             </div>
-                            <div class="checkout__input__checkbox">
+                            {{-- <div class="checkout__input__checkbox">
                                 <label for="acc">
                                     Thanh Toán khi nhận hàng
                                     <input type="checkbox" id="acc">
                                     <span class="checkmark"></span>
                                 </label>
-                            </div>
-                            
-                            
+                            </div> --}}
+
+
                             <div class="checkout__input">
                                 <p>Ghi chú thêm<span>*</span></p>
                                 <input type="text"
-                                    placeholder="Notes about your order, e.g. special notes for delivery.">
+                                    placeholder="Notes about your order, e.g. special notes for delivery." name="shipping_note">
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6">
@@ -116,7 +112,7 @@
         </div>
     </section>
     <!-- Checkout Section End -->
-    
- 
+
+
         </div>
 @endsection

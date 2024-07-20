@@ -133,8 +133,18 @@ Route::get('/active-brand/{categories_id}',[ProductController::class,'active_Bra
 Route::post('/save-cart', [CartController::class, 'save_cart'])->name('save_cart');
 Route::get('/cart',[CartController::class,'cart'])->name('cart');
 Route::delete('/cart/{id}', [CartController::class, 'remove'])->name('remove');
-
 Route::post('/update-cart', [CartController::class, 'update_cart'])->name('update_cart');
+
+
+
+//checklogin
+Route::get('/checklogin',[ChekoutController::class,'checklogin'])->name('checklogin');
+Route::post('/login',[ChekoutController::class,'post_login'])->name('post_login');
+Route::post('/save-checkout',[ChekoutController::class,'save_checkout'])->name('save_checkout');
+Route::get('/logout', [ChekoutController::class, 'logout'])->name('logout');
+
+
+
 
 
 

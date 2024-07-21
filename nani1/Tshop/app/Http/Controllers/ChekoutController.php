@@ -22,8 +22,10 @@ class ChekoutController extends Controller
     }
 
     public function checkout(){
-        return view('checkout');
+        $cartCollection = \Cart::getContent(); // Assuming you are using a package like Darryldecode\Cart
+        return view('checkout', compact('cartCollection'));
     }
+
 
     public function save_checkout(Request $request){
         $data = array();
@@ -38,6 +40,8 @@ class ChekoutController extends Controller
         Session::put('shipping_id', $shipping_id);
         return Redirect::to('/payment');
     }
+
+
 
     public function payment(){
         // Code xử lý phần thanh toán
@@ -55,14 +59,17 @@ class ChekoutController extends Controller
             $canLogin = Hash::check($password, $user->password);
         }
 
-        if($canLogin){ // cho phép đăng nhập
+        if($canLogin){ // Allow login
             Auth::login($user, $remember);
+            Session::put('id', $user->id);
+            Session::put('name', $user->name);
             return redirect()->route('home');
         } else {
             Session::put('message', 'Email hoặc mật khẩu không đúng!');
             return back();
         }
     }
+
 
     public function logout(){
         Auth::logout();

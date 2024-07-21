@@ -72,23 +72,20 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="checkout__order">
                                 <h4>Sản phẩm đã mua</h4>
-                                <div class="checkout__order__products">sản phẩm <span>thành tiền</span></div>
+                                <div class="checkout__order__products">Sản phẩm <span>Thành tiền</span></div>
                                 <ul>
-                                    <li> thịt bò 500g <span>95.000 đ</span></li>
-                                    <li> 2 lon nước ép cam <span>24.000 đ</span></li>
-                                    <li>cà rốt 300g <span>12.000 đ</span></li>
+                                    @foreach($cartCollection as $item)
+                                    <li>{{ $item->name }} <span>{{ number_format($item->price * $item->quantity, 0, '.', '.') }} VND</span></li>
+                                    @endforeach
                                 </ul>
-                                <div class="checkout__order__subtotal">Tổng  <span>130.000 đ</span></div>
-                                <div class="checkout__order__total">Thanh toán <span>130.000 đ</span></div>
-                                {{-- <div class="checkout__input__checkbox">
-                                    <label for="acc-or">
-                                        Create an account?
-                                        <input type="checkbox" id="acc-or">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div> --}}
-                                {{-- <p>Lorem ipsum dolor sit amet, consectetur adip elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua.</p> --}}
+                                <div class="checkout__order__subtotal">
+                                    Tổng <span>{{ number_format($cartCollection->sum('price'), 0, '.', '.') }} VND</span>
+                                </div>
+                                <div class="checkout__order__total">
+                                    Thanh toán <span>{{ number_format($cartCollection->sum(function($item) {
+                                        return $item->price * $item->quantity;
+                                    }), 0, '.', '.') }} VND</span>
+                                </div>
                                 <div class="checkout__input__checkbox">
                                     <label for="payment">
                                         Check Payment
@@ -103,9 +100,11 @@
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
-                                <button type="submit" class="site-btn">xác nhận</button>
+                                <button type="submit" class="site-btn">Xác nhận</button>
                             </div>
                         </div>
+                    </div>
+
                     </div>
                 </form>
             </div>

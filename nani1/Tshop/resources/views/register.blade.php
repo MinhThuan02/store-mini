@@ -29,19 +29,29 @@
                         @php
                             Session::forget('message');
                         @endphp
-                            
+
                         @endif
-                            
+
                             <form action="" method="POST" class="form-login">
                                 {{ csrf_field() }}
 
                                 <div data-mdb-input-init class="form-outline form-white mb-4">
-                                    <input type="text" class="form-control form-control-lg" placeholder="Điền email" name="name" />
+                                    <input type="text" class="form-control form-control-lg" placeholder="Nhập Tên" name="name" />
                                     <label class="form-label text-white" for="typeEmailX">Họ Tên</label>
                                 </div>
                                 <div data-mdb-input-init class="form-outline form-white mb-4">
                                     <input type="text" class="form-control form-control-lg" placeholder="Điền email" name="email" />
                                     <label class="form-label text-white" for="typeEmailX">Email</label>
+                                </div>
+
+                                <div data-mdb-input-init class="form-outline form-white mb-4">
+                                    <input type="text" class="form-control form-control-lg" placeholder="nhập sdt" name="phone" />
+                                    <label class="form-label text-white" for="typeEmailX">Số điện thoại</label>
+                                </div>
+
+                                <div data-mdb-input-init class="form-outline form-white mb-4">
+                                    <input type="text" class="form-control form-control-lg" placeholder="nhập địa chỉ" name="address" />
+                                    <label class="form-label text-white" for="typeEmailX">Địa chỉ</label>
                                 </div>
 
                                 <div data-mdb-input-init class="form-outline form-white mb-4">

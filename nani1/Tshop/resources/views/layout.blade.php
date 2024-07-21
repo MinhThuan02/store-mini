@@ -14,11 +14,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    
+
 
     <!-- Css Styles -->
     <link rel="stylesheet" href="{{asset('/')}}css/bootstrap.min.css" type="text/css">
-    
+
     <link rel="stylesheet" href="{{asset('/')}}css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="{{asset('/')}}css/elegant-icons.css" type="text/css">
     <link rel="stylesheet" href="{{asset('/')}}css/nice-select.css" type="text/css">
@@ -26,15 +26,17 @@
     <link rel="stylesheet" href="{{asset('/')}}css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="{{asset('/')}}css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="{{asset('/')}}css/style.css" type="text/css">
-    
-    
-    
+
+
+
 </head>
 
 <body>
+
     <header>
         <!-- <h1>@yield('title2') </h1> -->
     </header>
+
 @include('header')
 
 <main>
@@ -42,9 +44,9 @@
 @yield('home')
 
 </main>
-   
+
 @include('footer')
-    
+
 </body>
 
 </html>

@@ -139,7 +139,7 @@ Route::post('/update-cart', [CartController::class, 'update_cart'])->name('updat
 
 //checklogin
 Route::get('/checklogin',[ChekoutController::class,'checklogin'])->name('checklogin');
-Route::post('/login',[ChekoutController::class,'post_login'])->name('post_login');
+Route::post('/checklogin',[ChekoutController::class,'post_login'])->name('post_login');
 Route::post('/save-checkout',[ChekoutController::class,'save_checkout'])->name('save_checkout');
 Route::get('/logout', [ChekoutController::class, 'logout'])->name('logout');
 

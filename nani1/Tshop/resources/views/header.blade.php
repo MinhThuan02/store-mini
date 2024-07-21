@@ -1,4 +1,8 @@
 <!-- Header Section Begin -->
+<?php
+        echo Session::get('id');
+        echo Session::get('shipping_id');
+    ?>
 <header class="header">
     <div class="header__top">
         <div class="container">
@@ -85,7 +89,7 @@
                     </ul>
                 @else
                     <ul>
-                        <li><a href="{{ route('checkout') }}"><i class="fa fa-shopping-bag"></i> <span id="cart-quantity">{{ Cart::getTotalQuantity() }}</span></a></li>
+                        <li><a href="{{ route('cart') }}"><i class="fa fa-shopping-bag"></i> <span id="cart-quantity">{{ Cart::getTotalQuantity() }}</span></a></li>
                     </ul>
                 @endif
 
